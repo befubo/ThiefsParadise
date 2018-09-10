@@ -1,0 +1,7 @@
+class cfgFunctions
+{
+	#include "fnc\functions.hpp"
+};
+
+#include "defines.hpp"
+#include "dialogs.hpp"
