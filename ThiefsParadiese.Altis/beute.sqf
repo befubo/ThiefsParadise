@@ -1,3 +1,10 @@
+if(goggles player != "G_Balaclava_blk") exitWith {
+hint "Kein Balaclava an!";
+};
+
+if(goggles player == "G_Balaclava_blk") exitWith {
+
+
 _rand = random [1, 3, 5];
 _rander = _rand + 0.5;
 success = 0;
@@ -17,4 +24,4 @@ success = 0;
 		hint "Beutetasche voll!";
 		};
 		
-	
+	};

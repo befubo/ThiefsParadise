@@ -1,3 +1,9 @@
+if(goggles player != "G_Balaclava_blk") exitWith {
+hint "Kein Balaclava an!";
+};
+
+if(goggles player == "G_Balaclava_blk") exitWith {
+
 success = 0;
 [5, [], {success = 1}, {success = 0}, "Durchsuche Möbel"] call ace_common_fnc_progressBar;
 sleep 5.5;
@@ -21,3 +27,4 @@ if(rand < 1 && success == 1)  exitWith {
 		
 		if(success == 0) exitWith {
 		};
+	};

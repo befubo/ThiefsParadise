@@ -28,6 +28,24 @@ GOM_fnc_lockBuildingDoor = {
 	};
 
 GOM_fnc_unlockBuildingDoor = {
+
+	if(goggles player != "G_Balaclava_blk") exitWith {
+	hint "Kein Balaclava an!";
+	
+	_object setVariable [format ["bis_disabled_%1",_door],1,true];
+	params ["_building","_door"];
+	_building addAction ["<img size='2' image='res\unlock.paa'/>",{
+		params ["_object","_caller","_ID","_door"];
+		if (_object in (_caller getVariable ["GOM_fnc_keyRing",[]])) exitWith {
+			_object removeAction _ID;
+			_object setVariable [format ["bis_disabled_%1",_door],0,true];
+			_unlockAction = [_object,_door,_caller] call GOM_fnc_unlockBuildingDoor;
+			};
+		},_door,6,true,true,"","_this isEqualTo vehicle _this",15,false,_door];
+	};
+
+	if(goggles player == "G_Balaclava_blk") exitWith {
+	
 	_rand = random [10, 15, 20];
 	_rander = _rand + 0.5;
 	_object setVariable [format ["bis_disabled_%1",_door],1,true];
@@ -50,6 +68,7 @@ GOM_fnc_unlockBuildingDoor = {
 				_unlockAction = [_object,_door,_caller] call GOM_fnc_unlockBuildingDoor;
 				};
 			},_door,6,true,true,"","_this isEqualTo vehicle _this",15,false,_door];
+			};
 		};
 	};
 
