@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3627.166,13.763,13172.135};
-		dir[]={-0.18567955,-0.48145002,-0.85660148};
-		up[]={-0.10199461,0.87646347,-0.47053659};
-		aside[]={-0.97731906,4.3884938e-007,0.21184689};
+		pos[]={3498.0708,83.098579,13053.963};
+		dir[]={0.68534535,-0.55651808,0.46988589};
+		up[]={0.4590719,0.83077055,0.31475082};
+		aside[]={0.56553382,9.6985605e-007,-0.82484335};
 	};
 };
 binarizationWanted=0;
@@ -27,15 +27,14 @@ addons[]=
 {
 	"A3_Ui_F_Exp",
 	"A3_Ui_F",
-	"HueyPack",
 	"demian2435_police_mod",
 	"A3_Soft_F_Orange_Van_02",
 	"A3_Structures_F_Ind_Cargo",
 	"ace_cargo",
 	"A3_Characters_F",
+	"ace_nouniformrestrictions",
 	"A3_Weapons_F",
 	"ace_optics",
-	"MU_asset",
 	"A3_Weapons_F_Items",
 	"ace_medical",
 	"A3_Characters_F_Exp"
@@ -44,7 +43,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=13;
+		items=12;
 		class Item0
 		{
 			className="A3_Ui_F_Exp";
@@ -61,41 +60,43 @@ class AddonsMetaData
 		};
 		class Item2
 		{
-			className="HueyPack";
-			name="HueyPack";
-		};
-		class Item3
-		{
 			className="demian2435_police_mod";
 			name="demian2435_police_mod";
 		};
-		class Item4
+		class Item3
 		{
 			className="A3_Soft_F_Orange";
 			name="Arma 3 Orange - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item5
+		class Item4
 		{
 			className="A3_Structures_F_Ind";
 			name="Arma 3 - Industrial Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item6
+		class Item5
 		{
 			className="ace_cargo";
 			name="ACE3 - Cargo";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item7
+		class Item6
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
+		};
+		class Item7
+		{
+			className="ace_nouniformrestrictions";
+			name="ACE3 - No Uniform Restrictions";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 		class Item8
 		{
@@ -113,17 +114,12 @@ class AddonsMetaData
 		};
 		class Item10
 		{
-			className="MU_asset";
-			name="MU_asset";
-		};
-		class Item11
-		{
 			className="ace_medical";
 			name="ACE3 - Medical";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item12
+		class Item11
 		{
 			className="A3_Characters_F_Exp";
 			name="Arma 3 Apex - Characters and Clothing";
@@ -185,7 +181,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=9;
+		items=7;
 		class Item0
 		{
 			dataType="Marker";
@@ -195,22 +191,6 @@ class Mission
 			id=4;
 		};
 		class Item1
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={3184.2227,4.374095,12900.273};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=17;
-			type="Bell412";
-			atlOffset=2.3841858e-007;
-		};
-		class Item2
 		{
 			dataType="Object";
 			class PositionInfo
@@ -227,7 +207,7 @@ class Mission
 			type="demian2435_police_offroad";
 			atlOffset=-2.3841858e-006;
 		};
-		class Item3
+		class Item2
 		{
 			dataType="Object";
 			class PositionInfo
@@ -243,7 +223,7 @@ class Mission
 			id=3;
 			type="B_GEN_Van_02_transport_F";
 		};
-		class Item4
+		class Item3
 		{
 			dataType="Object";
 			class PositionInfo
@@ -260,7 +240,7 @@ class Mission
 			type="B_GEN_Van_02_transport_F";
 			atlOffset=-1.1920929e-006;
 		};
-		class Item5
+		class Item4
 		{
 			dataType="Object";
 			class PositionInfo
@@ -276,7 +256,7 @@ class Mission
 			id=43;
 			type="demian2435_police_offroad";
 		};
-		class Item6
+		class Item5
 		{
 			dataType="Object";
 			class PositionInfo
@@ -294,7 +274,7 @@ class Mission
 			id=51;
 			type="Land_CargoBox_V1_F";
 		};
-		class Item7
+		class Item6
 		{
 			dataType="Group";
 			side="East";
@@ -622,37 +602,6 @@ class Mission
 			{
 			};
 			id=69;
-		};
-		class Item8
-		{
-			dataType="Group";
-			side="East";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={3644.0547,10.106342,13137.802};
-					};
-					side="East";
-					flags=7;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=77;
-					type="O_G_medic_F";
-					atlOffset=-9.5367432e-007;
-				};
-			};
-			class Attributes
-			{
-			};
-			id=80;
-			atlOffset=-9.5367432e-007;
 		};
 	};
 };
