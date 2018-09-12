@@ -6,4 +6,5 @@ hint format ["Es hat geklickt: %1", _clicker];
 
 player setpos (_position);
 depot setPos (_position);
+
 openMap [false, false];

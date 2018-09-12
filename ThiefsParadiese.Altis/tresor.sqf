@@ -11,7 +11,7 @@ rand = random [1, 5, 10];
 price = round(random [10000, 25000, 50000]);
 if(rand >= 1 && success == 1)  exitWith {
 		_this select 0 removeAction 0;
-		hint format ["Du hast die Bank um %price erleichtert"];
+		hint format ["Du hast die Bank um %1€ erleichtert", price];
 		_PickUpOld = player getVariable "playerPickUp";
 		_PickUpCounter = _PickUpOld + price;
 		player setVariable ["playerPickUp", _PickUpCounter];

@@ -13,11 +13,14 @@ success = 0;
 		arg = _this select 3;
 		_PickUpOld = player getVariable "playerPickUp";
 		_PickUpNew = _PickUpOld + arg;
+		
+		
 	
 	
 		if(success == 1 && _PickUpNew <= 5000) then {
 		deleteVehicle (_this select 0);
 		player setVariable ["playerPickUp", _PickUpNew];
+		hint format ["Beute im Wert von %1€ aufgenommen", arg];
 		};
 
 		if(_PickUpNew > 5000) exitWith {
